@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% from "govuk/components/phase-banner/macro.njk"     import govukPhaseBanner %}
+
+{% block pageTitle %}
+  Publish teacher training courses - GOV.UK
+{% endblock %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Publish teacher training courses",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      {
+        href: "#",
+        text: "Sign out (Jane Doe)"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype of a new service. Some parts of this prototype do not work yet. '
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Prepare for the next cycle</h1>
+
+      <p>All your courses, locations and details have been copied over from the current recruitment cycle (2020-21). You can now update them for 2021-22.</p>
+
+      <p>You should: </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>add any new courses</li>
+        <li>delete courses you’re no longer running</li>
+        <li>edit titles, outcomes and locations where necessary</li>
+      </ul>
+
+      <a href="/recruiting" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">Next</a>
+
+    </div>
+
+  </div>
+{% endblock %}

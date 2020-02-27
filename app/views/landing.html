@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% from "govuk/components/phase-banner/macro.njk"     import govukPhaseBanner %}
+
+{% block pageTitle %}
+ Publish teacher training courses - GOV.UK
+{% endblock %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Publish teacher training courses",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      {
+        href: "#",
+        text: "Sign out (Jane Doe)"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype of a new service. Some parts of this prototype do not work yet. '
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "/recruiting"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {# <h1 class="govuk-heading-xl">King's College London (University of London)</h1> #}
+      {# <h1 class="govuk-heading-xl">UCL, University College London (University of London)</h1> #}
+      {# <h1 class="govuk-heading-xl">Leeds Beckett University</h1> #}
+      {# <h1 class="govuk-heading-xl">Brunel University London</h1> #}
+      <h1 class="govuk-heading-xl">Newman University</h1>
+      {# <h1 class="govuk-heading-xl">UCL, University College London (University of London)</h1> #}
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-!-margin-bottom-8">
+        <h2 class="govuk-heading-m">
+          <a href="javascript:void(0)" style="cursor: not-allowed;">Current cycle (2020&thinsp;–&thinsp;2021)</a>
+        </h2>
+
+        <p>Use this section to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>manage courses in the current cycle</li>
+          <li>edit locations and vacancies in the current cycle</li>
+        </ul>
+      </div>
+      <div class="govuk-!-margin-bottom-8">
+        <h2 class="govuk-heading-m">
+          <a href="javascript:void(0)" style="cursor: not-allowed;">Next cycle (2021&thinsp;–&thinsp;2022)</a>
+        </h2>
+        <p>Use this section to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>prepare courses for the next cycle</li>
+          <li>manage locations needed for the next cycle</li>
+        </ul>
+      </div>
+
+      <div class="govuk-!-margin-bottom-8">
+        <h2 class="govuk-heading-m">
+          <a href="javascript:void(0)" style="cursor: not-allowed;">About your organisation</a>
+        </h2>
+        <p>Use this section to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>write about your organisation</li>
+          <li>set your contact details</li>
+          <li>publish this information on all course pages</li>
+        </ul>
+      </div>
+
+      {# <h2 class="govuk-heading-l">Access and UCAS contacts</h2>
+      <div class="govuk-!-margin-bottom-8">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+          <a href="/request-access">Request access for someone</a>
+        </h2>
+        <p>Request a DfE Sign-in account for others who manage your courses.</p>
+      </div>
+      <div class="govuk-!-margin-bottom-8">
+        <h2 class="govuk-heading-m">
+          <a href="/ucas/apply-preferences">UCAS Apply settings</a>
+        </h2>
+        <p>These are settings that relate to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>what UCAS sends to successful applicants</li>
+          <li>what happens when you receive an application</li>
+          <li>who UCAS can contact</li>
+        </ul>
+      </div> #}
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="status-box" style="background-color: #f3f2f1; padding: 20px;">
+          <h2 class="govuk-heading-m">New features in Publish</h2>
+          <p class="govuk-body"><a href="javascript:void(0)" style="cursor: not-allowed;">View a list of new features</a> we plan to introduce in the coming months.</p>
+
+          <h2 class="govuk-heading-m">Support and guidance</h2>
+          <p class="govuk-body">If you have a question, or you’ve had a problem using Publish, you can email:</p>
+          <p class="govuk-body govuk-!-margin-bottom-0">
+            <a class="govuk-link" href="mailto:becomingateacher@digital.education.gov.uk?subject=Support%20and%20guidance">becomingateacher<wbr>@digital.education.gov.uk</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}
