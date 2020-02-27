@@ -1,0 +1,51 @@
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% extends "layout.html" %}
+{% set title = 'Courses as an accredited body' %}
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
+
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "[Provider name]",
+  href: "/pe-allocation/step-1"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/pe-allocation/request-places" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h1 class="govuk-fieldset__heading">
+            What is the the ITT Route of the cohort?
+          </h1>
+        </legend>
+        <div class="govuk-radios govuk-!-margin-top-6">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="route-provider" name="itt-route" type="radio" value="Provider-led {{ checked("itt-route", "Provider-led") }}">
+            <label class="govuk-label govuk-radios__label" for="route-provider">
+              Provider-led
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="route-sd" name="itt-route" type="radio" value="School Direct (fee-funded) {{ checked("itt-route", "School Direct (fee-funded)") }}">
+            <label class="govuk-label govuk-radios__label" for="route-sd">
+              School Direct (fee-funded)
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

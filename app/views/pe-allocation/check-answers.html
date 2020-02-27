@@ -1,0 +1,59 @@
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% extends "layout.html" %}
+{% set title = 'Courses as an accredited body' %}
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "[Provider name]",
+  href: "/pe-allocation/step-2"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+	<h1 class="govuk-heading-xl">Check your answers before continuing</h1>
+
+		<div class="body-text">
+
+			<dl class="govuk-summary-list">
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">
+						ITT Route
+					</dt>
+					<dd class="govuk-summary-list__value">
+						Provider-led 
+					</dd>
+					<dd class="govuk-summary-list__actions">
+						<a class="govuk-link" href="/docs/examples/pass-data/vehicle-type">
+							Change <span class="govuk-visually-hidden">ITT Route</span>
+						</a>
+					</dd>
+					</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">
+						Places requested
+					</dt>
+					<dd class="govuk-summary-list__value">
+						2
+					</dd>
+					<dd class="govuk-summary-list__actions">
+						<a class="govuk-link" href="/docs/examples/pass-data/vehicle-features">
+							Change <span class="govuk-visually-hidden">places requested</span>
+						</a>
+					</dd>
+				</div>
+			</dl>
+
+		</div> 
+
+	<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+	</div>
+</div>
+
+{% endblock %}

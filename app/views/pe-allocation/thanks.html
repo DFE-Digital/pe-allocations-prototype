@@ -1,0 +1,26 @@
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% extends "layout.html" %}
+{% set title = 'Courses as an accredited body' %}
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
+
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Provider name",
+  href: "/pe-allocations"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Thank you</h1>
+    <p>There is no more information needed at this point.</p>
+
+  </div>
+</div>
+
+{% endblock %}
