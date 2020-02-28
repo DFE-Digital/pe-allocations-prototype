@@ -6,7 +6,7 @@
 
 {% block beforeContent %}
 {{ govukBackLink({
-  text: "[Provider name]",
+  text: " Back",
   href: "/pe-allocations"
 }) }}
 {% endblock %}
@@ -22,18 +22,19 @@
         <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
           <h1 class="govuk-fieldset__heading">
-            Is this provider running a PR course for the first time in the 2021/22 cycle?
+            <span class="govuk-caption-xl">Enfield County School for Girls</span>
+            Is this provider running a PE course for the first time in the 2021/22 cycle?
           </h1>
         </legend>
         <div class="govuk-radios govuk-!-margin-top-6">
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="first-time-yes" name="first-time" type="radio" value="Yes {{ checked("first-time", "Yes") }}">
+            <input class="govuk-radios__input" id="first-time-yes" name="first-time" type="radio" value="Yes" {{ checked("first-time", "Yes") }}>
             <label class="govuk-label govuk-radios__label" for="first-time-yes">
               Yes
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="first-time-no" name="first-time" type="radio" value="No {{ checked("first-time", "No") }}">
+            <input class="govuk-radios__input" id="first-time-no" name="first-time" type="radio" value="No" {{ checked("first-time", "No") }}>
             <label class="govuk-label govuk-radios__label" for="first-time-no">
               No
             </label>

@@ -7,8 +7,8 @@
 
 {% block beforeContent %}
 {{ govukBackLink({
-  text: "Provider name",
-  href: "/pe-allocations"
+  text: "Middlesex University",
+  href: "/"
 }) }}
 {% endblock %}
 
@@ -17,12 +17,17 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">
-		<span class="govuk-caption-xl">Enfield County School for Girls</span>
-		Thank you
-	  </h1>
-    <p>There is no more information needed at this point.</p>
-    <p>Insert some information here about the policy regarding providers who have already had PE places allocated.</p>
+    <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-7">
+		<h1 class="govuk-panel__title">
+			Allocation request complete
+		</h1>
+	</div>
+	<p class="govuk-body ">We have sent you a confirmation email.</p>
+	<h2 class="govuk-heading-m">What happens next</h2>
+	<p class="govuk-body">Some information about what happens next.</p>
+</div>
+
+
 
   </div>
 </div>

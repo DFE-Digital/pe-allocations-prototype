@@ -6,8 +6,8 @@
 
 {% block beforeContent %}
 {{ govukBackLink({
-  text: "Provider name",
-  href: "/"
+  text: "Back",
+  href: "/pe-allocation/step-2"
 }) }}
 {% endblock %}
 
@@ -20,14 +20,15 @@
           <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
-              How many places are you requesting?
+              <span class="govuk-caption-xl">Alexandra Park School</span>
+              How many PE places are you requesting?
             </h1>
           </legend>
           <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
             <label class="govuk-label" for="event-name">
               <span class="govuk-visually-hidden">Enter the number of places yuo are requesting</span>
             </label>
-            <input class="govuk-input form-control-small" id="event-name" name="event-name" type="text">
+            <input class="govuk-input govuk-input govuk-input--width-10" id="requested-amount" name="requested-amount" value="{{ data['requested-amount'] }}" type="text">
           </div>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

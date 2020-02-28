@@ -6,17 +6,14 @@
 
 {% block beforeContent %}
 {{ govukBackLink({
-  text: "[Provider name]",
+  text: "Middlesex University",
   href: "/"
 }) }}
 {% endblock %}
 
 {% block content %}
   <h1 class="govuk-heading-xl">PE Allocations</h1>
-  
-
   <p>Use this section to request PE allocations for providers you the accredited body for.</p>
-
   <p>Message here about deadline for submissions and what will happen after July 10th.<p>
 
   <h2 class="govuk-heading-l govuk-!-margin-top-6">Training providers</h2>
@@ -56,7 +53,7 @@
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                   <span  class="govuk-heading-s govuk-!-margin-0">
-                    <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/submitted">Provider name one</a>
+                    <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/submitted-alexandra">Alexandra Park School</a>
                   </span>
               </td>
               <td class="govuk-table__cell">
@@ -66,11 +63,21 @@
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                   <span  class="govuk-heading-s govuk-!-margin-0">
-                     <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/step-1">Provider name two</a>
+                     <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/step-1">Enfield County School for Girls</a>
                   </span>
               </td>
               <td class="govuk-table__cell">
                   <span class="govuk-tag phase-tag-small phase-tag-table phase-tag--no-content">Incomplete</span>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                  <span  class="govuk-heading-s govuk-!-margin-0">
+                    <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/submitted-london">London Academy</a>
+                  </span>
+              </td>
+              <td class="govuk-table__cell">
+                  <span class="govuk-tag phase-tag-small phase-tag-table phase-tag--published">Submitted</span>
               </td>
             </tr>
           </tbody>
@@ -83,7 +90,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds govuk-!-margin-top-2">
         <h2 class="govuk-heading-l">Add another provider</h2>
-        <p>You may have had a new provider start in the upcoming recruitment cycle.</p>
+        <p>Do you have a new provider starting in the upcoming recruitment cycle?</p>
         <a class="govuk-button govuk-button--secondary govuk-!-margin-bottom-9" href="/pe-allocation/new-provider">Add another provider</a>
       </div>
   </div>

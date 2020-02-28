@@ -7,7 +7,7 @@
 
 {% block beforeContent %}
 {{ govukBackLink({
-  text: "[Provider name]",
+  text: "Back",
   href: "/pe-allocation/step-1"
 }) }}
 {% endblock %}
@@ -23,18 +23,19 @@
         <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
           <h1 class="govuk-fieldset__heading">
+		  <span class="govuk-caption-xl">Enfield County School for Girls</span>
             What is the the ITT Route of the cohort?
           </h1>
         </legend>
         <div class="govuk-radios govuk-!-margin-top-6">
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="route-provider" name="itt-route" type="radio" value="Provider-led {{ checked("itt-route", "Provider-led") }}">
+            <input class="govuk-radios__input" id="route-provider" name="itt-route" type="radio" value="Provider-led" {{ checked("itt-route", "Provider-led") }}>
             <label class="govuk-label govuk-radios__label" for="route-provider">
               Provider-led
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="route-sd" name="itt-route" type="radio" value="School Direct (fee-funded) {{ checked("itt-route", "School Direct (fee-funded)") }}">
+            <input class="govuk-radios__input" id="route-sd" name="itt-route" type="radio" value="School Direct (fee-funded)" {{ checked("itt-route", "School Direct (fee-funded)") }}>
             <label class="govuk-label govuk-radios__label" for="route-sd">
               School Direct (fee-funded)
             </label>

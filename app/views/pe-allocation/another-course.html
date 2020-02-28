@@ -1,0 +1,53 @@
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% extends "layout.html" %}
+{% set title = 'Courses as an accredited body' %}
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
+
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "/pe-allocation/check-answers"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/pe-allocation/another-course" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-8">
+            <span class="govuk-caption-xl">Alexandra Park School</span>
+            Does this provider have another PE course to request places for?
+          </h1>
+          <p class="gov-uk-body">You only need to request places for PE courses being run for the first time in 2021/22.</p>
+        </legend>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="another-course-yes" name="another-course" type="radio" value="Yes" {{ checked("another-course", "Yes") }}>
+            <label class="govuk-label govuk-radios__label" for="another-course-yes">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="another-course-no" name="another-course" type="radio" value="No" {{ checked("another-course", "No") }}>
+            <label class="govuk-label govuk-radios__label" for="another-course-no">
+              No
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

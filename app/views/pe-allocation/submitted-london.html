@@ -7,7 +7,7 @@
 
 {% block beforeContent %}
 {{ govukBackLink({
-  text: "Provider name",
+  text: "PE Allocations",
   href: "/pe-allocations"
 }) }}
 {% endblock %}
@@ -16,7 +16,10 @@
 
   <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Your allocation request for this provider has been submitted</h1>
+        <h1 class="govuk-heading-xl">
+          	<span class="govuk-caption-xl">London Academy</span>
+          	Your PE allocation request has been submitted
+	    </h1>
       </div>
   </div>
 
@@ -24,36 +27,23 @@
         <table class="govuk-table ucas-info-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th class="govuk-table__header subject-col" style="width: 33%">Course</th>
+              <th class="govuk-table__header subject-col" style="width: 33%"></th>
               <th class="govuk-table__header status-col" style="width: 33%">Route</th>
-              <th class="govuk-table__header status-col" style="width: 33%">Places</th>
+              <th class="govuk-table__header status-col" style="width: 33%">Places</th
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                   <span  class="govuk-heading-s govuk-!-margin-0">
-                    Course name (code)
+                    Entry 1
                   </span>
               </td>
               <td class="govuk-table__cell">
-                  Provider-led
+                  School Direct (fee-funded) 
               </td>
               <td class="govuk-table__cell">
                   3
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                 <span  class="govuk-heading-s govuk-!-margin-0">
-                    Course name (code)
-                  </span>
-              </td>
-              <td class="govuk-table__cell">
-                  School Direct (fee-funded)
-              </td>
-              <td class="govuk-table__cell">
-                  2
               </td>
             </tr>
           </tbody>

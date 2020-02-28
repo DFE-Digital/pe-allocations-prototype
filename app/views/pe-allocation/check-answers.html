@@ -6,8 +6,8 @@
 
 {% block beforeContent %}
 {{ govukBackLink({
-  text: "[Provider name]",
-  href: "/pe-allocation/step-2"
+  text: "Back",
+  href: "/pe-allocation/request-places"
 }) }}
 {% endblock %}
 
@@ -16,20 +16,24 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 
-	<h1 class="govuk-heading-xl">Check your answers before continuing</h1>
+	<h1 class="govuk-heading-xl">
+		<span class="govuk-caption-xl">Alexandra Park School</span>
+		Check your answers before continuing
+	</h1>
 
 		<div class="body-text">
 
+			<h2 class="govuk-heading-m">Submission name</h2>
 			<dl class="govuk-summary-list">
 				<div class="govuk-summary-list__row">
 					<dt class="govuk-summary-list__key">
 						ITT Route
 					</dt>
 					<dd class="govuk-summary-list__value">
-						Provider-led 
+						{{ data['itt-route'] }}
 					</dd>
 					<dd class="govuk-summary-list__actions">
-						<a class="govuk-link" href="/docs/examples/pass-data/vehicle-type">
+						<a class="govuk-link" href="/pe-allocation/step-2">
 							Change <span class="govuk-visually-hidden">ITT Route</span>
 						</a>
 					</dd>
@@ -39,10 +43,10 @@
 						Places requested
 					</dt>
 					<dd class="govuk-summary-list__value">
-						2
+						{{ data['requested-amount'] }}
 					</dd>
 					<dd class="govuk-summary-list__actions">
-						<a class="govuk-link" href="/docs/examples/pass-data/vehicle-features">
+						<a class="govuk-link" href="/pe-allocation/request-places">
 							Change <span class="govuk-visually-hidden">places requested</span>
 						</a>
 					</dd>
@@ -51,7 +55,8 @@
 
 		</div> 
 
-	<button class="govuk-button" data-module="govuk-button">Continue</button>
+		{# <button class="govuk-button" data-module="govuk-button">Continue</button> #}
+		<a class="govuk-button " href="/pe-allocation/another-course">Continue</a>
 
 	</div>
 </div>

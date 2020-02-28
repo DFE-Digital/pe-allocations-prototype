@@ -1,0 +1,76 @@
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% extends "layout.html" %}
+{% set title = 'Courses as an accredited body' %}
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "/pe-allocation/another-course"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+	<h1 class="govuk-heading-xl">
+		<span class="govuk-caption-xl">Alexandra Park School</span>
+		Submit your allocation request
+	</h1>
+
+	<div class="body-text">
+
+		<h2 class="govuk-heading-m">Submission name</h2>
+		<dl class="govuk-summary-list">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">
+					ITT Route
+				</dt>
+				<dd class="govuk-summary-list__value">
+					{{ data['itt-route'] }} 
+				</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">
+					Places requested
+				</dt>
+				<dd class="govuk-summary-list__value">
+					{{ data['requested-amount'] }}
+				</dd>
+			</div>
+		</dl>
+		
+		{# <h2 class="govuk-heading-m govuk-!-margin-top-8">Submission name</h2>
+		<dl class="govuk-summary-list">
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">
+					ITT Route
+				</dt>
+				<dd class="govuk-summary-list__value">
+					{{ data['itt-route'] }} 
+				</dd>
+			</div>
+			<div class="govuk-summary-list__row">
+				<dt class="govuk-summary-list__key">
+					Places requested
+				</dt>
+				<dd class="govuk-summary-list__value">
+					{{ data['requested-amount'] }}
+				</dd>
+			</div>
+		</dl> #}
+	
+	<p>This is the screen that submits your answers to DfE.</p>
+
+	</div> 
+
+	{# <button class="govuk-button govuk-!-margin-top-3" data-module="govuk-button">Submit</button> #}
+	<a class="govuk-button " href="/pe-allocation/confirmation">Submit</a>
+
+	</div>
+</div>
+
+{% endblock %}
