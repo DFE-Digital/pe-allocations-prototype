@@ -1,0 +1,29 @@
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% extends "layout.html" %}
+{% set title = 'Courses as an accredited body' %}
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
+
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "PE Allocations",
+  href: "/pe-allocations"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+		  <span class="govuk-caption-xl">Enfield County School for Girls</span>
+		  Add another request for this provider
+	  </h1>
+    <p>There is a placeholder page for that start of the process to add another request.</p>
+
+  </div>
+</div>
+
+{% endblock %}

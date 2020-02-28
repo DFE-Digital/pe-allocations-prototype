@@ -27,7 +27,7 @@ router.post('/pe-allocation/another-course', function (req, res) {
     let firstTime = req.session.data['another-course']
     
     if (firstTime === 'Yes') {
-        res.redirect('/pe-allocation/step-2')
+        res.redirect('/pe-allocation/next-entry')
     } else {
         res.redirect('/pe-allocation/submit-answers')
     }
