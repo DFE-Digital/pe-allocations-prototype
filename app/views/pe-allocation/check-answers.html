@@ -17,30 +17,16 @@
 	<div class="govuk-grid-column-two-thirds">
 
 	<h1 class="govuk-heading-xl">
-		<span class="govuk-caption-xl">Alexandra Park School</span>
-		Check your answers before continuing
+		<span class="govuk-caption-xl">Enfield County School for Girls</span>
+		Confirm alllocation request before submitting
 	</h1>
 
 		<div class="body-text">
 
-			<h2 class="govuk-heading-m">Submission name</h2>
 			<dl class="govuk-summary-list">
 				<div class="govuk-summary-list__row">
 					<dt class="govuk-summary-list__key">
-						ITT Route
-					</dt>
-					<dd class="govuk-summary-list__value">
-						{{ data['itt-route'] }}
-					</dd>
-					<dd class="govuk-summary-list__actions">
-						<a class="govuk-link" href="/pe-allocation/step-2">
-							Change <span class="govuk-visually-hidden">ITT Route</span>
-						</a>
-					</dd>
-					</div>
-				<div class="govuk-summary-list__row">
-					<dt class="govuk-summary-list__key">
-						Places requested
+						Places
 					</dt>
 					<dd class="govuk-summary-list__value">
 						{{ data['requested-amount'] }}
@@ -53,10 +39,12 @@
 				</div>
 			</dl>
 
+			<p>This will submit your request to DfE.</p>
+
 		</div> 
 
 		{# <button class="govuk-button" data-module="govuk-button">Continue</button> #}
-		<a class="govuk-button " href="/pe-allocation/another-course">Continue</a>
+		<a class="govuk-button" href="/pe-allocation/confirmation">Submit</a>
 
 	</div>
 </div>

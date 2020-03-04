@@ -6,8 +6,8 @@
 
 {% block beforeContent %}
 {{ govukBackLink({
-  text: "Provider name",
-  href: "/"
+  text: " Back",
+  href: "/pe-allocations"
 }) }}
 {% endblock %}
 
@@ -25,7 +25,6 @@
           </legend>
           <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
             <label class="govuk-label" for="event-name">
-              Note for jesse: This will be an autocompete in the live service
               <span class="govuk-visually-hidden">Provider name</span>
             </label>
             <input class="govuk-input" id="event-name" name="event-name" type="text">
