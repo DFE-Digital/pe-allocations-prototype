@@ -13,6 +13,20 @@ router.post('/pe-allocation/step-1', function (req, res) {
     if (firstTime === 'Yes') {
         res.redirect('/pe-allocation/thanks')
     } else {
+        res.redirect('/pe-allocation/thanks-not-thanks')
+    }
+})
+
+router.post('/pe-allocation/new-provider', function (req, res) {
+    // Get the answer from session data
+    // The name between the quotes is the same as the 'name' attribute on the input elements
+    // However in JavaScript we can't use hyphens in variable names
+    
+    let firstTime = req.session.data['first-time']
+    
+    if (firstTime === 'Yes') {
+        res.redirect('/pe-allocation/thanks')
+    } else {
         res.redirect('/pe-allocation/request-places')
     }
 })
