@@ -12,87 +12,73 @@
 {% endblock %}
 
 {% block content %}
-  <h1 class="govuk-heading-xl">PE Allocations</h1>
-  <p>Use this section to request PE allocations for providers you the accredited body for.</p>
-  <p>Message here about deadline for submissions and what will happen after July 10th.<p>
+<div class="govuk-grid-row">
 
-  <h2 class="govuk-heading-m govuk-!-margin-top-6">Training providers</h2>
-  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-xl">Request PE courses for 2021/22</h1>
+  <p>If you or your partners wish to offer fee-funded PE courses in 2021/22, you must let us know by 10 July 2020. If you don’t tell us by then, you won’t be able to offer the course. We do not need to know about salaried PE courses.</p>
+  <p>You’ll need to:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>confirm which 2020/21 PE courses you and your partners would like to offer in 2021/22</li>
+    <li>request any new PE courses (ones not offered in 2020/21), and tell us how many trainees you’d like to recruit to them</li>
+  </ul>
 
-      {# <ul class="govuk-list">
-        {% for provider in data['providers'] %}
-          <li>
-            <h3 class="govuk-heading-m">
-              <a href="/accredited-body/{{ provider.code }}">{{ provider.name }} ({{ provider.code }})</a>
-              <span class="govuk-body govuk-!-font-weight-regular govuk-!-display-block">
-                Lead school: Example School Name<br />
-                {{ provider.count }}&nbsp;course{% if not (provider.count == 1) %}s{% endif %}
+  <h2 class="govuk-heading-m govuk-!-margin-top-6">Would you like to offer these PE courses in 2021/22?</h2>
+  
+  <p>You’re listed as the accredited body for these training providers - each is offering fee-funded PE in 2020/21. Confirm whether you want to offer these courses again in 2021/22. You do not need to supply recruitment numbers. <p>
+    
+    <div class="body-text">
+      <table class="govuk-table ucas-info-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header subject-col" style="width: 380px">Provider</th>
+            <th class="govuk-table__header status-col" style="width: 160px">Status</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <span  class="govuk-heading-s govuk-!-margin-0">
+                <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/submitted-alexandra">Alexandra Park School</a>
               </span>
-            </h3>
-          </li>
-        {% endfor %}
-        <li>
-            <h3 class="govuk-heading-m">
-              <a href="/accredited-body/{{ provider.code }}">Cornwall (xxx)</a>
-              <span class="govuk-body govuk-!-font-weight-regular govuk-!-display-block"></span>
-            </h3>
-          </li>
-      </ul> #}
-
-    <div class="govuk-grid-column-two-thirds">
-
-      <div class="body-text">
-        <table class="govuk-table ucas-info-table">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th class="govuk-table__header subject-col" style="width: 380px">Provider</th>
-              <th class="govuk-table__header status-col" style="width: 160px">Status</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                  <span  class="govuk-heading-s govuk-!-margin-0">
-                    <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/submitted-alexandra">Alexandra Park School</a>
-                  </span>
-              </td>
-              <td class="govuk-table__cell">
-                  <span class="govuk-tag phase-tag-small phase-tag-table phase-tag--published">Submitted</span>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                  <span  class="govuk-heading-s govuk-!-margin-0">
-                     <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/step-1">Enfield County School for Girls</a>
-                  </span>
-              </td>
-              <td class="govuk-table__cell">
-                  <span class="govuk-tag phase-tag-small phase-tag-table phase-tag--no-content">Incomplete</span>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                  <span  class="govuk-heading-s govuk-!-margin-0">
-                    <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/submitted-london">London Academy</a>
-                  </span>
-              </td>
-              <td class="govuk-table__cell">
-                  <span class="govuk-tag phase-tag-small phase-tag-table phase-tag--published">Submitted</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      
+            </td>
+            <td class="govuk-table__cell">
+              <span class="govuk-tag phase-tag-small phase-tag-table phase-tag--published">Completed</span>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <span  class="govuk-heading-s govuk-!-margin-0">
+                <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/step-1">Enfield County School for Girls</a>
+              </span>
+            </td>
+            <td class="govuk-table__cell">
+              <span class="govuk-tag phase-tag-small phase-tag-table phase-tag--no-content">Incomplete</span>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <span  class="govuk-heading-s govuk-!-margin-0">
+                <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/submitted-london">London Academy</a>
+              </span>
+            </td>
+            <td class="govuk-table__cell">
+              <span class="govuk-tag phase-tag-small phase-tag-table phase-tag--published">Completed</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
+    
   </div>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-2">
-        <h2 class="govuk-heading-m">Request allocations for a new provider</h2>
-        <p>Add an existing provider.</p>
-        <a class="govuk-button govuk-!-margin-bottom-9" href="/pe-allocation/new-provider">Add an existing provider</a>
-      </div>
+  
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-2">
+    <h2 class="govuk-heading-m govuk-!-margin-top-6">Are you offering any new PE courses in 2021/22?</h2>
+    <p>Tell us if you or your partners wish to offer any new PE courses in 2021/22. Add the name of the training provider. You’ll be asked to supply recruitment numbers for these courses. </p>
+    <a class="govuk-button govuk-!-margin-bottom-9" href="/pe-allocation/new-provider">Add a provider</a>
   </div>
+</div>
 
 {% endblock %}

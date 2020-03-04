@@ -23,7 +23,7 @@
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
           <h1 class="govuk-fieldset__heading">
             <span class="govuk-caption-xl">Enfield County School for Girls</span>
-            Is this provider running a PE course in the 2021/22 cycle?
+            Does this provider want to offer PE in 2021/22?
           </h1>
         </legend>
         <div class="govuk-radios govuk-!-margin-top-6">
@@ -32,6 +32,9 @@
             <label class="govuk-label govuk-radios__label" for="first-time-yes">
               Yes
             </label>
+            <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+            By choosing Yes you are requesting permission for the provider to offer this course. 
+          </span>
           </div>
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="first-time-no" name="first-time" type="radio" value="No" {{ checked("first-time", "No") }}>
