@@ -11,9 +11,9 @@ router.post('/pe-allocation/step-1', function (req, res) {
     let firstTime = req.session.data['first-time']
     
     if (firstTime === 'Yes') {
-        res.redirect('/pe-allocation/thanks')
+        res.redirect('/pe-allocation/request-sent')
     } else {
-        res.redirect('/pe-allocation/thanks-not-thanks')
+        res.redirect('/pe-allocation/no-request-confirmed')
     }
 })
 

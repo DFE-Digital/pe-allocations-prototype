@@ -4,10 +4,19 @@
 {% block pageTitle %}{{ title }}{% endblock %}
 {% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
 
+
 {% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype of a new service. Some parts of this prototype do not work yet. '
+}) }}
+
 {{ govukBackLink({
-  text: " Back",
-  href: "/pe-allocations"
+  text: "Back",
+  href: "/pe-allocation/new-proivder"
 }) }}
 {% endblock %}
 
@@ -16,33 +25,29 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="/pe-allocation/step-1" method="post" class="form">
+    <form action="/pe-allocation/request-places" method="post" class="form">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
           <h1 class="govuk-fieldset__heading">
-            <span class="govuk-caption-xl">Enfield County School for Girls</span>
-            Does this provider want to offer PE in 2021/22?
+		  <span class="govuk-caption-xl">Enfield County School for Girls</span>
+            What is the the ITT Route of the cohort?
           </h1>
         </legend>
         <div class="govuk-radios govuk-!-margin-top-6">
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="first-time-yes" name="first-time" type="radio" value="Yes" {{ checked("first-time", "Yes") }}>
-            <label class="govuk-label govuk-radios__label" for="first-time-yes">
-              Yes
+            <input class="govuk-radios__input" id="route-provider" name="itt-route" type="radio" value="Provider-led" {{ checked("itt-route", "Provider-led") }}>
+            <label class="govuk-label govuk-radios__label" for="route-provider">
+              Provider-led
             </label>
-            <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-            By choosing Yes you are requesting permission for the provider to offer this course. 
-          </span>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="first-time-no" name="first-time" type="radio" value="No" {{ checked("first-time", "No") }}>
-            <label class="govuk-label govuk-radios__label" for="first-time-no">
-              No
+            <input class="govuk-radios__input" id="route-sd" name="itt-route" type="radio" value="School Direct (fee-funded)" {{ checked("itt-route", "School Direct (fee-funded)") }}>
+            <label class="govuk-label govuk-radios__label" for="route-sd">
+              School Direct (fee-funded)
             </label>
           </div>
-        </div>
         </fieldset>
       </div>
 

@@ -1,10 +1,17 @@
 {% extends "layout.html" %}
-{% set title = 'Courses as an accredited body' %}
+{% set title = 'Request PE courses for 2021/22' %}
 {% block pageTitle %}{{ title }}{% endblock %}
 {% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
-{% set newCourseFormUrl = 'https://goo.gl/forms/HJ17Hob3728X3mTc2' if data['new-course']['include-accredited'] else 'https://goo.gl/forms/kdNksCuwcz7TVtNF2' %}
 
 {% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype of a new service. Some parts of this prototype do not work yet. '
+}) }}
+
 {{ govukBackLink({
   text: "Middlesex University",
   href: "/"
@@ -16,7 +23,7 @@
 
   <div class="govuk-grid-column-two-thirds">
   <h1 class="govuk-heading-xl">Request PE courses for 2021/22</h1>
-  <p>If you or your partners wish to offer fee-funded PE courses in 2021/22, you must let us know by 10 July 2020. If you don’t tell us by then, you won’t be able to offer the course. We do not need to know about salaried PE courses.</p>
+  <p>If you or your partners wish to offer fee-funded PE courses in 2021/22, you must let us know by 10 July 2020. We do not need to know about salaried PE courses.</p>
   <p>You’ll need to:</p>
   <ul class="govuk-list govuk-list--bullet">
     <li>confirm which 2020/21 PE courses you and your partners would like to offer in 2021/22</li>
@@ -31,8 +38,9 @@
       <table class="govuk-table ucas-info-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <th class="govuk-table__header subject-col" style="width: 380px">Provider</th>
-            <th class="govuk-table__header status-col" style="width: 160px">Status</th>
+            <th class="govuk-table__header subject-col" style="width: 380px">Training provider</th>
+            <th class="govuk-table__header status-col">Status</th>
+            <th class="govuk-table__header status-col"></th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
@@ -45,17 +53,24 @@
             <td class="govuk-table__cell">
               <span class="govuk-tag phase-tag-small phase-tag-table phase-tag--published">Completed</span>
             </td>
+            <td class="govuk-table__cell">
+               <a href="javascript:void(0)" style="cursor: not-allowed;">Change</a>
+            </td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <span  class="govuk-heading-s govuk-!-margin-0">
-                <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/step-1">Enfield County School for Girls</a>
+                <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/offer-pe">Enfield County School for Girls</a>
               </span>
             </td>
             <td class="govuk-table__cell">
               <span class="govuk-tag phase-tag-small phase-tag-table phase-tag--no-content">Incomplete</span>
             </td>
+            <td class="govuk-table__cell">
+               <a href="/pe-allocation/new-provider"></a>
+            </td>
           </tr>
+          
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <span  class="govuk-heading-s govuk-!-margin-0">
@@ -64,6 +79,9 @@
             </td>
             <td class="govuk-table__cell">
               <span class="govuk-tag phase-tag-small phase-tag-table phase-tag--published">Completed</span>
+            </td>
+            <td class="govuk-table__cell">
+               <a href="javascript:void(0)" style="cursor: not-allowed;">Change</a>
             </td>
           </tr>
         </tbody>
@@ -75,7 +93,7 @@
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds govuk-!-margin-top-2">
-    <h2 class="govuk-heading-m govuk-!-margin-top-6">Are you offering any new PE courses in 2021/22?</h2>
+    <h2 class="govuk-heading-m govuk-!-margin-top-6">Would you like to request any new PE courses in 2021/22?</h2>
     <p>Tell us if you or your partners wish to offer any new PE courses in 2021/22. Add the name of the training provider. You’ll be asked to supply recruitment numbers for these courses. </p>
     <a class="govuk-button govuk-!-margin-bottom-9" href="/pe-allocation/new-provider">Add a provider</a>
   </div>

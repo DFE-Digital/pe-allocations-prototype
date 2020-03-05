@@ -5,9 +5,17 @@
 {# {% set newCourseFormUrl = 'https://goo.gl/forms/HJ17Hob3728X3mTc2' if data['new-course']['include-accredited'] else 'https://goo.gl/forms/kdNksCuwcz7TVtNF2' %} #}
 
 {% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype of a new service. Some parts of this prototype do not work yet. '
+}) }}
+
 {{ govukBackLink({
   text: "Back",
-  href: "/pe-allocation/step-2"
+  href: "/pe-allocation/new-provider"
 }) }}
 {% endblock %}
 

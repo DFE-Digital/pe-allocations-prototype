@@ -5,10 +5,19 @@
 {% set newCourseFormUrl = 'https://goo.gl/forms/HJ17Hob3728X3mTc2' if data['new-course']['include-accredited'] else 'https://goo.gl/forms/kdNksCuwcz7TVtNF2' %}
 
 {% block beforeContent %}
-{{ govukBackLink({
-  text: " Back",
-  href: "/pe-allocations"
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype of a new service. Some parts of this prototype do not work yet. '
 }) }}
+
+{{ govukBackLink({
+  text: "PE allocations",
+  href: "/pe-allocations-phase-2"
+}) }}
+
 {% endblock %}
 
 {% block content %}
@@ -41,3 +50,9 @@
   </div>
 
 {% endblock %}
+
+<script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+
+<script type="text/javascript">
+
+</script>

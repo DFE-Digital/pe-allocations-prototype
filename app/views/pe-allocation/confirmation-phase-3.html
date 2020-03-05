@@ -6,9 +6,17 @@
 
 
 {% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype of a new service. Some parts of this prototype do not work yet. '
+}) }}
+
 {{ govukBackLink({
-  text: "Middlesex University",
-  href: "/"
+  text: "PE Allocations",
+  href: "/pe-allocations-phase-3"
 }) }}
 {% endblock %}
 
@@ -24,7 +32,7 @@
 		</div>
 		<p class="govuk-body ">You have confirmed that (insert name of provider) would like to offer fee-funded PE in 2021/22. You will shortly receive an email to (accredited body email address) setting out next steps. 
 		</p>
-		<a class="govuk-button govuk-!-margin-top-2" role="button" href="/pe-allocations-phase-2">Continue</a>
+		<a class="govuk-button govuk-!-margin-top-2" role="button" href="/pe-allocations-phase-3">Continue</a>
 
 	</div>
 

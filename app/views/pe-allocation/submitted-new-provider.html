@@ -1,14 +1,22 @@
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {% extends "layout.html" %}
-{% set title = 'Courses as an accredited body' %}
+{% set title = 'Request submitted' %}
 {% block pageTitle %}{{ title }}{% endblock %}
 {% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
 
 
 {% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype of a new service. Some parts of this prototype do not work yet. '
+}) }}
+
 {{ govukBackLink({
   text: "PE Allocations",
-  href: "/pe-allocations-phase-2"
+  href: "/pe-allocations-phase-3"
 }) }}
 {% endblock %}
 
@@ -28,7 +36,7 @@
                 Places requested
               </dt>
               <dd class="govuk-summary-list__value">
-                2
+                {{ data['requested-amount'] }}
               </dd>
             </div>
           </dl>

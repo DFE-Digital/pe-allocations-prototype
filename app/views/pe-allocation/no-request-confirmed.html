@@ -4,8 +4,15 @@
 {% block pageTitle %}{{ title }}{% endblock %}
 {% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
 
-
 {% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype of a new service. Some parts of this prototype do not work yet. '
+}) }}
+
 {{ govukBackLink({
   text: "Provider name",
   href: "/pe-allocations"
@@ -18,10 +25,10 @@
   <div class="govuk-grid-column-two-thirds">
 
 		<h1 class="govuk-panel__title">
-			<span class="govuk-caption-xl">Provider name</span>
-			Heading
+			<span class="govuk-caption-xl">Enfield County School for Girls</span>
+			Thank you
 		</h1>
-		<p>Thank you for confirming that Enfield School will not be offering fee-funded PE in 2021/22</p>
+		<p>You have confirmed that Enfield School will not be offering fee-funded PE in 2021/22.</p>
 		<p>If you have any questions, you should contact <a href="mailto:becomingateacher@digitial.education.gov.uk">becomingateacher@digitial.education.gov.uk</a></p>
 		<a class="govuk-button govuk-!-margin-top-2" role="button" href="/pe-allocations">Continue</a>
 
