@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% set title = 'Courses as an accredited body' %}
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Middlesex University",
+  href: "/"
+}) }}
+{% endblock %}
+
+{% block content %}
+	<div class="govuk-grid-row">
+		<div class="govuk-grid-column-two-thirds">
+			<h1 class="govuk-heading-xl">Request undergraduate and EYITT courses for 2021/22</h1>
+			<p>If you or your partners wish to offer undergraduate or early years initial teacher training (EYITT) courses in 2021/22, you must let us know by 10 July 2020.</p>
+
+			<h2 class="govuk-heading-m govuk-!-margin-top-6">EYITT</h2>
+
+			<a class="govuk-button govuk-!-margin-bottom-2" href="/pe-allocation/new-provider">Request EYITT courses</a>
+			<p>You’ll be taken to a Google Form to fill in your details.</p>
+			<h2 class="govuk-heading-m govuk-!-margin-top-3">Undergraduate</h2>
+			<a class="govuk-button govuk-!-margin-bottom-2" href="/pe-allocation/new-provider">Request undergraduate courses</a>
+			<p>You’ll be taken to a Google Form to fill in your details.</p>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
