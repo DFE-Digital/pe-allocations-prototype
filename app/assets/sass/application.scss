@@ -17,21 +17,16 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
-// Phase tags
+// Tags
 
-.phase-tag--no-content {
+
+.govuk-tag {
+    background:#1d70b8
+}
+
+.govuk-tag--grey {
     color: #454a4d;
-    background:#eff0f1;
-}
-.phase-tag--draft {
-    background:#f47738
-}
-.phase-tag--withdrawn {
-    background:#0b0c0c;
-    color:#fff
-}
-.phase-tag--published {
-    background:#00823b
+    background:#eff0f1; 
 }
 
 // autocomplete

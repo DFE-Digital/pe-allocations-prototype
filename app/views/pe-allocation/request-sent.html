@@ -13,11 +13,6 @@
   },
   html: 'This is a prototype of a new service. Some parts of this prototype do not work yet. '
 }) }}
-
-{{ govukBackLink({
-  text: "Back",
-  href: "/pe-allocation/offer-pe"
-}) }}
 {% endblock %}
 
 {% block content %}
@@ -26,13 +21,14 @@
   <div class="govuk-grid-column-two-thirds">
 
     <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-7">
-		<h1 class="govuk-panel__title">
-			Request sent
-		</h1>
-	</div>
-	<p class="govuk-body ">You have confirmed that Enfield School would like to offer fee-funded PE in 2021/22. You will shortly receive an email to <a href="mailto:ecsgeneral@enfieldcs.enfield.sch.uk">ecsgeneral@enfieldcs.enfield.sch.uk</a> setting out next steps.</p>
-	<a class="govuk-button govuk-!-margin-top-2" href="/pe-allocations-phase-2">Continue</a>
-
+      <h1 class="govuk-panel__title">
+        Request sent
+      </h1>
+      <div class="govuk-panel__body">Enfield School would like to offer PE in 2021/22.</div>
+	  </div>
+    <h2 class="govuk-heading-m">What happens next</h2>
+    <p class="govuk-body">You will shortly receive an email to <a href="mailto:ecsgeneral@enfieldcs.enfield.sch.uk">ecsgeneral@enfieldcs.enfield.sch.uk</a> setting out next steps.</p>
+    <a class="govuk-body govuk-!-font-weight-bold govuk-!-margin-top-6" style="display: block" href="/pe-allocations">Return to Request PE courses</a>
   </div>
 </div>
 
