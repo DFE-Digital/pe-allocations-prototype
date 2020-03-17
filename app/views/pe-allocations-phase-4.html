@@ -2,6 +2,7 @@
 {% set title = 'Request PE courses for 2021/22' %}
 {% block pageTitle %}{{ title }}{% endblock %}
 {% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
+{% set newCourseFormUrl = 'https://goo.gl/forms/HJ17Hob3728X3mTc2' if data['new-course']['include-accredited'] else 'https://goo.gl/forms/kdNksCuwcz7TVtNF2' %}
 
 {% block beforeContent %}
 
@@ -31,9 +32,8 @@
     <p>Each of the following organisations is offering fee-funded PE in the current cycle (2020/21). You’re listed as their accredited body. Your organisation will also be included if it’s currently offering its own PE courses.</p>
 
     <p>Tell us whether you want to request these courses again for the next cycle. You do not need to supply recruitment numbers.</p>
-
+    
     <div class="body-text">
-
       <table class="govuk-table ucas-info-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
@@ -46,27 +46,27 @@
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <span  class="govuk-heading-s govuk-!-margin-0">
-                <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/offer-pe-ab">University of Bristol</a>
+                <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/submitted-ab">University of Bristol</a>
               </span>
             </td>
             <td class="govuk-table__cell">
-              <span class="govuk-tag govuk-tag-small govuk-tag-table govuk-tag--grey">Incomplete</span>
+              <span class="govuk-tag govuk-tag-small govuk-tag-table">No</span>
             </td>
             <td class="govuk-table__cell">
-              
+              <a href="#/">Change</a>
             </td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <span  class="govuk-heading-s govuk-!-margin-0">
-                <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/offer-pe-e">Enfield County School for Girls</a>
+                <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/submitted-e">Enfield County School for Girls</a>
               </span>
             </td>
             <td class="govuk-table__cell">
-              <span class="govuk-tag govuk-tag-small govuk-tag-table govuk-tag--grey">Incomplete</span>
+              <span class="govuk-tag govuk-tag-small govuk-tag-table">Yes</span>
             </td>
             <td class="govuk-table__cell">
-               
+               <a href="/pe-allocation/offer-pe-e">Change</a>
             </td>
           </tr>
           <tr class="govuk-table__row">
@@ -82,14 +82,44 @@
               {# <a href="#/">Change</a> #}
             </td>
           </tr>
-        
+
+        </tbody>
+      </table>
+
+    </div>
+    
+    <div class="body-text">
+      <table class="govuk-table ucas-info-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header subject-col" style="width: 320px">Organisations added for 2021/22</th>
+            <th class="govuk-table__header status-col" style="width: 250px">Places requested</th>
+            <th class="govuk-table__header status-col"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <span  class="govuk-heading-s govuk-!-margin-0">
+                <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/submitted-new-provider">Hope Valley College</a>
+              </span>
+            </td>
+            <td class="govuk-table__cell">
+              {{ data['requested-amount'] }}
+            </td>
+            <td class="govuk-table__cell">
+               <a href="/pe-allocation/offer-pe-h">Change</a>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
     
   </div>
+
+  </div>
   
-</div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds govuk-!-margin-top-2">
     <h2 class="govuk-heading-m govuk-!-margin-top-6">Do you want to request any new PE courses?</h2>
