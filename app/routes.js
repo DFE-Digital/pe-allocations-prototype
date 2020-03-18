@@ -39,7 +39,7 @@ router.post('/pe-allocation/offer-pe-e', function (req, res) {
     let firstTime = req.session.data['first-time']
     
     if (firstTime === 'Yes') {
-        res.redirect('/pe-allocation/estimated-allocation-e')
+        res.redirect('/pe-allocation/request-sent-e')
     } else {
         res.redirect('/pe-allocation/no-request-confirmed-e')
     }
