@@ -2,7 +2,6 @@
 {% set title = 'Request PE courses for 2021/22' %}
 {% block pageTitle %}{{ title }}{% endblock %}
 {% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
-{% set newCourseFormUrl = 'https://goo.gl/forms/HJ17Hob3728X3mTc2' if data['new-course']['include-accredited'] else 'https://goo.gl/forms/kdNksCuwcz7TVtNF2' %}
 
 {% block beforeContent %}
 
@@ -14,7 +13,7 @@
 }) }}
 
 {{ govukBackLink({
-  text: "University of Bristol",
+  text: "Middlesex University",
   href: "/"
 }) }}
 {% endblock %}
@@ -45,7 +44,7 @@
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">
               <span  class="govuk-heading-s govuk-!-margin-0">
-                <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/submitted-ab">University of Bristol</a>
+                <a class="govuk-link govuk-heading-s govuk-!-margin-bottom-0" href="/pe-allocation/submitted-ab">Middlesex University</a>
               </span>
             </td>
             <td class="govuk-table__cell">
