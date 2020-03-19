@@ -36,7 +36,7 @@ router.post('/pe-allocation/offer-pe-e', function (req, res) {
     // The name between the quotes is the same as the 'name' attribute on the input elements
     // However in JavaScript we can't use hyphens in variable names
     
-    let firstTime = req.session.data['first-time']
+    let firstTime = req.session.data['first-time-e']
     
     if (firstTime === 'Yes') {
         res.redirect('/pe-allocation/request-sent-e')
@@ -78,7 +78,7 @@ router.post('/pe-allocation/offer-pe-h', function (req, res) {
     // The name between the quotes is the same as the 'name' attribute on the input elements
     // However in JavaScript we can't use hyphens in variable names
     
-    let firstTime = req.session.data['first-time']
+    let firstTime = req.session.data['first-time-h']
     
     if (firstTime === 'Yes') {
         res.redirect('/pe-allocation/request-places')
