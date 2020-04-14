@@ -40,10 +40,9 @@
       <table class="govuk-table ucas-info-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <th class="govuk-table__header subject-col" style="width: 35%">Organisation</th>
-            <th class="govuk-table__header status-col" style="width: 25%">Status</th>
-            <th class="govuk-table__header status-col" style=""></th>
-            <th class="govuk-table__header status-col" style=""></th>
+            <th class="govuk-table__header subject-col">Organisation</th>
+            <th class="govuk-table__header status-col">Status</th>
+            <th class="govuk-table__header status-col"><span class="govuk-visually-hidden">Actions</span></th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
@@ -55,10 +54,7 @@
               <span class="govuk-tag govuk-tag-small govuk-tag-table govuk-tag--green">Requested</span>
             </td>
             <td class="govuk-table__cell">
-              <a href="/pe-allocation/offer-pe-e">Change <span class="govuk-visually-hidden">request for {org name}</span></a>
-            </td>
-            <td class="govuk-table__cell">
-              <a href="/pe-allocation/request-sent-e">View confirmation <span class="govuk-visually-hidden">for {org name}</span></a>
+              <a href="/pe-allocation/offer-pe-e">Change <span class="govuk-visually-hidden">request for {org name}</span></a> | <a href="/pe-allocation/request-sent-e">View confirmation <span class="govuk-visually-hidden">for {org name}</span></a>
             </td>
           </tr>
           <tr class="govuk-table__row">
@@ -69,10 +65,7 @@
               <span class="govuk-tag govuk-tag-small govuk-tag-table govuk-tag--red">Not requested</span>
             </td>
             <td class="govuk-table__cell">
-              <a href="#/">Change <span class="govuk-visually-hidden">request for {org name}</span></a>
-            </td>
-            <td class="govuk-table__cell">
-               <a href="/pe-allocation/no-request-confirmed-l">View confirmation <span class="govuk-visually-hidden">for {org name}</span></a>
+              <a href="#/">Change <span class="govuk-visually-hidden">request for {org name}</span></a> | <a href="/pe-allocation/no-request-confirmed-l">View confirmation <span class="govuk-visually-hidden">for {org name}</span></a>
             </td>
           </tr>
           <tr class="govuk-table__row">
@@ -84,10 +77,7 @@
               <span class="govuk-tag govuk-tag-small govuk-tag-table govuk-tag--green">Requested</span>
             </td>
             <td class="govuk-table__cell">
-               <a href="#/">Change</a>
-            </td>
-            <td class="govuk-table__cell">
-               <a href="/pe-allocation/request-sent-ab">View confirmation <span class="govuk-visually-hidden"> for {org name}</span></a>
+               <a href="#/">Change</a> | <a href="/pe-allocation/request-sent-ab">View confirmation <span class="govuk-visually-hidden"> for {org name}</span></a>
             </td>
           </tr>
         </tbody>
