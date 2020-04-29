@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% set title = 'Request PE courses for 2021/22' %}
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype of a new service. Some parts of this prototype do not work yet. '
+}) }}
+
+{{ govukBackLink({
+  text: "University of East Anglia",
+  href: "/"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Request PE courses for 2021/22</h1>
+    <p>You need to request any fee-funded PE courses for 2021/22 by 10 July 2020. You do not need to request salaried PE courses.</p>
+    <p>Once you’ve made a request, you can change it before 10 July.</p>
+  </div>
+  
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>Select the name of the organisation offering the course. You’ll be asked to give recruitment figures.</p>
+    <a class="govuk-button govuk-!-margin-bottom-9" href="/pe-allocation/new-provider">Choose an organisation</a>
+  </div>
+</div>
+
+{% endblock %}

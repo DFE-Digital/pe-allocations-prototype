@@ -14,7 +14,7 @@
 }) }}
 
 {{ govukBackLink({
-  text: "PE Allocations",
+  text: "Request PE courses",
   href: "/pe-allocations"
 }) }}
 {% endblock %}
@@ -31,7 +31,7 @@
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
           <h1 class="govuk-fieldset__heading">
             <span class="govuk-caption-xl">Enfield County School for Girls</span>
-            Do you want to request PE for this provider in 2021/22?
+            Do you want to request PE for this organisation?
           </h1>
         </legend>
         <div class="govuk-radios govuk-!-margin-top-6">
@@ -40,9 +40,6 @@
             <label class="govuk-label govuk-radios__label" for="first-time-yes">
               Yes
             </label>
-            <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-            By choosing Yes you are requesting permission for the provider to offer this course. 
-          </span>
           </div>
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="first-time-no" name="first-time" type="radio" value="No" {{ checked("first-time", "No") }}>

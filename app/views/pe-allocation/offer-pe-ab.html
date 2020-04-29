@@ -24,21 +24,21 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="/pe-allocation/step-1" method="post" class="form">
+    <form action="/pe-allocation/offer-pe-ab" method="post" class="form">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
           <h1 class="govuk-fieldset__heading">
-            <span class="govuk-caption-xl">Enfield County School for Girls</span>
-            Do you want to request PE for this organisation?
+            <span class="govuk-caption-xl">University of East Anglia</span>
+            Do you want to request PE for 2021/22?
           </h1>
         </legend>
         <div class="govuk-radios govuk-!-margin-top-6">
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="first-time-yes" name="first-time" type="radio" value="Yes" {{ checked("first-time", "Yes") }}>
+            <input class="govuk-radios__input" id="first-time-yes" name="first-time" type="radio" value="Yes" {{ checked("first-time", "Yes") }} checked>
             <label class="govuk-label govuk-radios__label" for="first-time-yes">
-              Yes, request permission for the organisation to offer this course 
+              Yes 
             </label>
           </div>
           <div class="govuk-radios__item">

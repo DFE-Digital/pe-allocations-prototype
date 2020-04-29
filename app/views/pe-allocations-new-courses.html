@@ -42,7 +42,8 @@
           <tr class="govuk-table__row">
             <th class="govuk-table__header subject-col" style="width: 35%">Organisation</th>
             <th class="govuk-table__header status-col" style="width: 25%">Status</th>
-            <th class="govuk-table__header status-col"><span class="govuk-visually-hidden">Actions</span></th>
+            <th class="govuk-table__header status-col" style=""></th>
+            <th class="govuk-table__header status-col" style=""></th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
@@ -51,10 +52,10 @@
                 Enfield County School for Girls
             </th>
             <td class="govuk-table__cell">
-              <span class="govuk-tag govuk-tag-small govuk-tag-table govuk-tag--grey">Yet to request</span>
+              <span class="govuk-tag govuk-tag-small govuk-tag-table govuk-tag--green">Requested</span>
             </td>
             <td class="govuk-table__cell">
-               <a href="/pe-allocation/offer-pe-e">Confirm choice</a>
+              <a href="/pe-allocation/offer-pe-e">Change <span class="govuk-visually-hidden">request for {org name}</span></a> | <a href="/pe-allocation/request-sent-e">View confirmation <span class="govuk-visually-hidden">for {org name}</span></a>
             </td>
           </tr>
           <tr class="govuk-table__row">
@@ -65,7 +66,7 @@
               <span class="govuk-tag govuk-tag-small govuk-tag-table govuk-tag--red">Not requested</span>
             </td>
             <td class="govuk-table__cell">
-              <a href="#/">Change<span class="govuk-visually-hidden">request for {org name}</span></a> |  <a href="/pe-allocation/no-request-confirmed-l">View confirmation <span class="govuk-visually-hidden">for {org name}</span></a>
+              <a href="#/">Change <span class="govuk-visually-hidden">request for {org name}</span></a> | <a href="/pe-allocation/no-request-confirmed-l">View confirmation <span class="govuk-visually-hidden">for {org name}</span></a>
             </td>
           </tr>
           <tr class="govuk-table__row">
@@ -84,15 +85,14 @@
       </table>
     </div>
 
-    {# <div class="body-text">
+    <div class="body-text">
       <h2 class="govuk-heading-m govuk-!-margin-top-7">New PE courses in 2021/22</h2>
       <table class="govuk-table ucas-info-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th class="govuk-table__header subject-col" style="width: 35%">Organisation</th>
             <th class="govuk-table__header status-col" style="width: 25%">Status</th>
-            <th class="govuk-table__header status-col" style=""></th>
-            <th class="govuk-table__header status-col" style=""></th>
+            <th class="govuk-table__header status-col"><span class="govuk-visually-hidden">Actions</span></th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
@@ -106,22 +106,19 @@
               <span class="govuk-tag govuk-tag-small govuk-tag-table govuk-tag--green">5 places requested</span>
             </td>
             <td class="govuk-table__cell">
-               <a href="/pe-allocation/offer-pe-h">Change</a>
-            </td>
-            <td class="govuk-table__cell">
-               <a href="/pe-allocation/submitted-new-provider">View confirmation<span class="govuk-visually-hidden"> for {org name}</span></a>
+               <a href="/pe-allocation/offer-pe-h">Change</a> | <a href="/pe-allocation/submitted-new-provider">View confirmation<span class="govuk-visually-hidden"> for {org name}</span></a>
             </td>
           </tr>
         </tbody>
       </table>
-    </div> #}
+    </div>
     
   </div>
 </div> 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h2 class="govuk-heading-m govuk-!-margin-top-6">Request new PE courses</h2>
+    <h2 class="govuk-heading-m govuk-!-margin-top-6">Do you want to request any new PE courses?</h2>
     <p>Request any PE courses for 2021/22 not offered in the current cycle. Select the name of the organisation offering the course. You’ll be asked how many places you’d like to request.</p>
     <a class="govuk-button govuk-!-margin-bottom-9" href="/pe-allocation/new-provider">Choose an organisation</a>
   </div>
