@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% set title = 'Request PE courses for 2021 – 2022' %}
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block breadcrumbs %}{{ macros.breadcrumbs(breadcrumbItems())}}{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype of a new service. Some parts of this prototype do not work yet. '
+}) }}
+
+{{ govukBackLink({
+  text: "Middlesex University",
+  href: "/"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">PE courses requested for 2021 – 2022</h1>
+    <p>You did not request any fee funded PE courses for 2021 – 2022.</p>
+    <p>If you have any questions, contact <a href="mailto:becomingateacher@digital.education.gov.uk">becomingateacher@digital.education.gov.uk.</a></p>
+  </div>
+    
+  </div>
+</div>
+
+{% endblock %}
